@@ -1,9 +1,16 @@
 @use "../utils/mixins" as *;
 @use "../utils/footer" as *;
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
 body {
   @include bodyStyling;
-  background-color: $bodybg;
+  background-color: #eee;
 
   .sitecontainer {
     @include flexcol();
@@ -12,39 +19,84 @@ body {
     justify-content: flex-start;
     min-height: 100vh;
     width: 100%;
+    flex: 1; // takes up remaining space between header and footer
+    padding-top: 200px;
   }
+  .iconsdiv {
+    width: 80%;
+    @include border(#ff0000);
+    @include flexcol;
+    height: auto;
+    padding: 30px;
 
-  div#verified {
-    width: 29px;
-    aspect-ratio: 1 / 1;
-    // this is alright but not optimal
-    // vertical-align: middle;
-    position: relative;
-    top: 1px;
+    div#verified {
+      // this is alright but not optimal
+      // vertical-align: middle;
+      position: relative;
+      top: 1px;
 
-    // path from html file
+      // path from html file
 
-    display: inline-block;
+      display: inline-block;
 
-    // url("../../images/verified.png");
-    /* The gradient that will show through the opaque parts */
-    background: linear-gradient(
-      290deg,
-      #425d84ff 0%,
-      #605bf7ff 10%,
-      #60c4ffff 61%,
-      #529665ff 100%
-    );
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+      // url("../../images/verified.png");
+      /* The gradient that will show through the opaque parts */
+      background: linear-gradient(
+        290deg,
+        #425d84ff 0%,
+        #605bf7ff 10%,
+        #60c4ffff 61%,
+        #529665ff 100%
+      );
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
 
-    /* Mask (the PNG shape reveals the gradient/image) */
-    -webkit-mask-image: url("../../images/verified.png");
-    mask-image: url("../../images/verified.png");
-    mask-mode: alpha;
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    mask-position: center;
+      /* Mask (the PNG shape reveals the gradient/image) */
+      -webkit-mask-image: url("../../images/verified.png");
+      mask-image: url("../../images/verified.png");
+      mask-mode: alpha;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+    }
+    div#artificial {
+      // this is alright but not optimal
+      // vertical-align: middle;
+      position: relative;
+      top: 1px;
+
+      // path from html file
+
+      display: inline-block;
+
+      // url("../../images/verified.png");
+      /* The gradient that will show through the opaque parts */
+
+      background: linear-gradient(
+        90deg,
+        #60c4ff 5%,
+        #ff8a00 38%,
+        #e52e71 67%,
+        #5e9652 92%
+      );
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      /* Mask (the PNG shape reveals the gradient/image) */
+      -webkit-mask-image: url("../../images/verified.png");
+      mask-image: url("../../images/verified.png");
+      mask-mode: alpha;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+    }
+    .icon {
+      width: 290px;
+      aspect-ratio: 1 / 1;
+      margin: 500px 0;
+    }
   }
 }
