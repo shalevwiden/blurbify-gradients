@@ -1,0 +1,22 @@
+div#verified {
+  width: 29px;
+  aspect-ratio: 1/1;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  /* The gradient that will show through the opaque parts */
+  background: linear-gradient(290deg, #425d84 0%, #605bf7 10%, #60c4ff 61%, #529665 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* Mask (the PNG shape reveals the gradient/image) */
+  -webkit-mask-image: url("../../images/verified.png");
+  mask-image: url("../../images/verified.png");
+  mask-mode: alpha;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+}/*# sourceMappingURL=main.css.map */

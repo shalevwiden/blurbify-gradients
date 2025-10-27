@@ -1,0 +1,50 @@
+@use "../utils/mixins" as *;
+@use "../utils/footer" as *;
+
+body {
+  @include bodyStyling;
+  background-color: $bodybg;
+
+  .sitecontainer {
+    @include flexcol();
+    // add some default gap
+    gap: 40px;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  div#verified {
+    width: 29px;
+    aspect-ratio: 1 / 1;
+    // this is alright but not optimal
+    // vertical-align: middle;
+    position: relative;
+    top: 1px;
+
+    // path from html file
+
+    display: inline-block;
+
+    // url("../../images/verified.png");
+    /* The gradient that will show through the opaque parts */
+    background: linear-gradient(
+      290deg,
+      #425d84ff 0%,
+      #605bf7ff 10%,
+      #60c4ffff 61%,
+      #529665ff 100%
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    /* Mask (the PNG shape reveals the gradient/image) */
+    -webkit-mask-image: url("../../images/verified.png");
+    mask-image: url("../../images/verified.png");
+    mask-mode: alpha;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+  }
+}
