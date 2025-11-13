@@ -58,8 +58,8 @@ body {
 
       // -webkit-mask-image: url("../../images/towernobg.png");
       // mask-image: url("../../images/towernobg.png");
-      mask-mode: alpha;
-      mask-repeat: no-repeat;
+
+      // necessary to maintain the shape
       mask-size: contain;
       mask-position: center;
     }
