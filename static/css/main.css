@@ -64,7 +64,7 @@ body .iconsdiv div#verified {
   top: 1px;
   display: inline-block;
   /* The gradient that will show through the opaque parts */
-  background: linear-gradient(290deg, #425d84 0%, #605bf7 10%, #60c4ff 61%, #529665 100%);
+  background: linear-gradient(290deg, #425d84 0%, #605bf7 10%, #60c4ff 49%, #529665 95%);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

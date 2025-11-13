@@ -43,10 +43,10 @@ body {
       /* The gradient that will show through the opaque parts */
       background: linear-gradient(
         290deg,
-        #425d84ff 0%,
-        #605bf7ff 10%,
-        #60c4ffff 61%,
-        #529665ff 100%
+        #425d84 0%,
+        #605bf7 10%,
+        #60c4ff 49%,
+        #529665 95%
       );
       background-repeat: no-repeat;
       background-size: cover;
@@ -55,6 +55,9 @@ body {
       /* Mask (the PNG shape reveals the gradient/image) */
       -webkit-mask-image: url("../../images/verified.png");
       mask-image: url("../../images/verified.png");
+
+      // -webkit-mask-image: url("../../images/towernobg.png");
+      // mask-image: url("../../images/towernobg.png");
       mask-mode: alpha;
       mask-repeat: no-repeat;
       mask-size: contain;
